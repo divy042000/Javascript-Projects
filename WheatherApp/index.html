@@ -7,15 +7,51 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/968ecc584f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="wrapper">
         <header><i class="fas fa-arrow-left"></i>Weather App</header>
         <section class="input">
-            <p class="infotxt">Please Enter a valid city</p>
-            <input type="text" placeholder="Enter city name" spellcheck="false">
+            <p class="infotxt"></p>
+            <input type="text" placeholder="Enter city name" spellcheck="false" required >
+            <div class="separator"></div>
+            <button >Get Device Location</button>
         </section>
-    </div>
+         <section class="weatherpart">
+          <img src="sunny.png" alt="Weather Icon">
+          <div class="temp">
+            <span class="numb">_</span>
+            <span class="deg">°C</span>
+          </div>
+          <div class="weather">_ _</div>
+          <div class="location">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>&nbsp;_ , _</span>
+          </div>
+          <div class="bottomdetails">
+            <div class="columnfeels">
+                <i class="fas fa-temperature-high"></i>
+                <div class="details">
+                  <div class="temp">
+                    <span class="numb-2">_</span>
+                    <span class="deg">°C</span>
+                  </div>
+                  <p>Feels Like</p>
+                </div>    
+          </div>
+          <div class="columnhumidity">
+            <div class="details"> 
+              <i class="fa-solid fa-droplet"></i>
+              <div class="humidity">
+                <span class="numb">_&nbsp;</span>
+                <span><p> Humidty</p></span>
+              </div>
+          </div>
+        </div>
+         </section>
+    
     <script src="myscript.js"></script>
 </body>
 </html>
