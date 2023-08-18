@@ -1,0 +1,21 @@
+import React, { useState, useEffect } from 'react';
+
+export default function App() {
+  const [value, setValue] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setValue((prevValue) => (prevValue + 10) % 101); // Increment and reset at 100
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  return (
+    <div>
+      <progress value={value} max={100} />
+    </div>
+  );
+}
